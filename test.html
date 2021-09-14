@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/19b78c3e0c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <input type="checkbox" id="expand-toggle" />
+
+
+    <label for="expand-toggle" id="expand-btn"><i class="fas fa-user"></i></label>
+
+
+    <form id="form">
+      
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="********">
+      <input type="submit" value="login">
+
+
+
+    </form>
+    <label for="expand-toggle" id="close-btn"><i class="fas fa-window-close"></i></label>
+  </div>  
+<style>
+
+    #wrapper{
+      width: 960px;
+      margin: 50px auto;
+      border: 1px solid #e5e5e5;
+      padding: 50px;
+    }
+    #expand-btn{
+      display: block;
+      text-align: center;
+    }
+    input[type=checkbox],#close-btn{
+      display: none;
+    }
+
+    #form{
+      display: none;
+      border: 1px solid #e5e5e5;
+      padding: 20px;
+    }
+    input{
+      width: 90%;
+      padding: 10px 5%;
+      border: none;
+      border-bottom: 1px solid pink;
+    }
+    input[type=submit]{
+      margin-top: 20px;
+      text-align: center;
+      background: none;
+      box-shadow: 0 0 10px gray;
+      width: 70px;
+      padding: 10px 20px;
+      display: block;
+    }
+    /* Style the button when the checkbox is checked */
+    #expand-toggle:checked ~ #form {
+      /*background-color: #ccc;*/
+      display: block;
+    }
+    #expand-toggle:checked ~ #close-btn{
+      display: block;
+    }
+    #expand-toggle:checked ~ #expand-btn{
+      display: none;
+    }
+
+</style>
+</body>
+</html>

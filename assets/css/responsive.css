@@ -1,0 +1,52 @@
+@media (max-width: 800px){
+  .partners-wrapper{
+    display: none;
+  }
+  .hero{
+    width: 100%;
+  }
+  .hero .title{
+    width: 100%;
+    text-align: center;
+  }
+  .nav-burger{
+    display: block;
+  }
+  .nav-container{
+    display: none !important;
+  }
+  .overlay{
+    display: block;
+  }
+}
+
+
+
+@media (min-width: 768px){
+  .nav-container {
+    width: 750px;
+  }
+
+}
+@media (min-width: 992px) {
+  .nav-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px){
+  .nav-container {
+      width: 1170px;
+  }
+}
+
+
+@media (max-width: 768px){
+  .card {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+  }
+}
+
+
