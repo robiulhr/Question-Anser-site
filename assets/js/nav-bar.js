@@ -1,5 +1,57 @@
-// ------------------------------------- small screen navigation--------------------------------
+// ---------------------------------------- big screen navigation dropdown --------------------------------------------
 
+let menuitemDom = document.querySelectorAll("li[menu-item='clickable-hover']")
+let submenuitemDom = document.querySelectorAll("li[menu-item='clickable-hover-2']")
+let subMenu = document.querySelectorAll(".submenu")
+
+
+
+menuitemDom.forEach((e) => {
+    let showAndhidemenu = (nodeNum, displayProperty, isshowingValue) => {
+        e.childNodes[nodeNum].style.display = displayProperty
+        isshowing = isshowingValue
+    }
+    let isshowing = false
+    e.addEventListener("click", () => {
+        if (!isshowing) {
+            showAndhidemenu(3, "block", true)
+        } else {
+            showAndhidemenu(3, "none", false)
+        }
+    })
+    document.addEventListener("click", element => {
+        console.log(element);
+        if (!element.path.includes(e)) {
+            showAndhidemenu(3, "none", false)
+        }
+        else if (element.path.includes(submenuitemDom[0])) {
+            showAndhidemenu(3, "block", true)
+        }
+    })
+})
+
+submenuitemDom.forEach((e) => {
+    let showAndhideSubmenu = (nodeNum, displayProperty, isshowingValue) => {
+        e.childNodes[nodeNum].style.display = displayProperty
+        isshowing2 = isshowingValue
+    }
+    let isshowing2 = false
+
+    e.addEventListener("click", () => {
+        if (!isshowing2) {
+            showAndhideSubmenu(3, "block", true)
+        } else {
+            showAndhideSubmenu(3, "none", false)
+        }
+    })
+    document.addEventListener("click", element => {
+        if (!element.path.includes(e)) {
+            showAndhideSubmenu(3, "none", false)
+        }
+    })
+})
+
+// ------------------------------------- small screen navigation--------------------------------
 const fullBody = document.querySelector("body")
 const navMenu = document.getElementById("nav-menu")
 const fullpagemenu = document.getElementById("full-page-menu")
@@ -50,6 +102,7 @@ for (i = 0; i < dropdown.length; i++) {
         }
     });
 }
+
 //----------------------------------------------------------small screen mega menu---------------------------------------
 
 

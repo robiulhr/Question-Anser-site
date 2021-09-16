@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="./assets/css/bootstrap.css">
 	<link rel="stylesheet" href="./assets/css/nav-icon.css">
 	<link rel="stylesheet" href="./assets/css/nav-bar.css">
-	<link rel="stylesheet" href="./assets/css/log-in-sign-up.css">
 	<link rel="stylesheet" href="./assets/css/styles.css">
 
 
@@ -132,14 +131,15 @@
 	<nav class=" topnav sticky">
 		<div class="menu nav-container">
 			<ol class="topnav-links">
-				<li class="menu-item  item item-text""><a href=" #0">Home</a></li>
-				<li class="menu-item item item-text""><a href=" #0">About</a></li>
-				<li class="menu-item  item item-text"">
-							<a href=" #0">Widgets</a>
+				<li class="menu-item  item item-text"><a href=" #0">Home</a></li>
+				<li class="menu-item item item-text"><a href=" #0">About</a></li>
+				<li class="menu-item  item item-text" menu-item="clickable-hover">
+					<a href=" #0">Widgets</a>
 					<ol class="sub-menu">
 						<li class="menu-item"><a href="#0">Big Widgets</a></li>
 						<li class="menu-item"><a href="#0">Bigger Widgets</a></li>
-						<li class="menu-item"><a href="#0">Huge Widgets</a>
+						<li class="menu-item" menu-item="clickable-hover-2">
+							<a href="#0">Huge Widgets</a>
 							<ol class="sub-menu mega-submenu">
 								<li class="menu-item"><a href="#0">Big Widgets</a>
 
@@ -150,30 +150,40 @@
 						</li>
 					</ol>
 				</li>
-				<li class="menu-item item item-text"">
-							<a href=" #0">Kabobs</a>
+				<li class="menu-item item item-text" menu-item="clickable-hover">
+					<a href=" #0">Kabobs</a>
 					<ol class="sub-menu">
 						<li class="menu-item"><a href="#0">Shishkabobs</a></li>
 						<li class="menu-item"><a href="#0">BBQ kabobs</a></li>
 						<li class="menu-item"><a href="#0">Summer kabobs</a></li>
 					</ol>
 				</li>
-				<li class="menu-item"><a href="#0">Contact</a></li>
+				<li class="menu-item item item-text"><a href="#0">Contact</a></li>
 			</ol>
 			<div class="topnav-icons">
 				<!-- ----------------------------------- search form -------------------------------------- -->
 				<form class="search-box"><input type="text" placeholder=" " /><button type="reset"></button></form>
 				<!-- ----------------------------------------- notification icon --------------------------------------- -->
-				<ul class="dots">
-					<li>
+				<ul class="dots" style="display: none;">
+					<li class=" menu-item item item-text" menu-item="clickable-hover">
 						<a href="#">
 
 							<span class="glyphicon glyphicon-time">
 								<img src="./assets/img/code.png" style="width: 30px; height: 30px;" alt="">
 								<mark class="rubberBand">99</mark></span>
 						</a>
+						<ol class="sub-menu" style="top: 85%">
+							<li class="menu-item"><a href="#0">Big Widgets</a></li>
+							<li class="menu-item"><a href="#0">Bigger Widgets</a></li>
+							<li class="menu-item"><a href="#0">Huge Widgets</a>
+							</li>
+						</ol>
 					</li>
 				</ul>
+				<!-- ----------------------------------------- login - signup button -------------------------------------------- -->
+				<div class="text-box" style="display: block;">
+					<a href="./login-signup-page.html" class="btn btn-white btn-        animate">click me</a>
+				</div>
 				<!-- --------------------------------------- theme changer ------------------------------------ -->
 				<span class="item theme-changer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 						<g>
@@ -297,6 +307,7 @@
 
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/nav-bar.js"></script>
+	<script src="./assets/js/log-in-sign-up.js"></script>
 	<script src="./assets/js/log-in-sign-up.js"></script>
 	<script>
 		dump_questions()
